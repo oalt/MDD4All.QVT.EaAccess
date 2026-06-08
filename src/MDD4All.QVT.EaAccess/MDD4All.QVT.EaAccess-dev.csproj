@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>$(MSBuildProjectName.Replace("-dev", ""))</RootNamespace>
+    <AssemblyName>$(MSBuildProjectName.Replace("-dev", ""))</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\LL.MDE.Components.Qvt.Common\src\LL.MDE.Components.Qvt.Common-dev.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Interop.EA">
+      <HintPath>..\..\..\libs\Interop.EA.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+
+</Project>
